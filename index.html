@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>AVR LTD</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<img src="logo.png" class="header-logo">
+<h2>AVR LTD</h2>
+</div>
+
+<nav>
+<a href="watchlist.html">Watchlist</a>
+<button onclick="logout()">Logout</button>
+</nav>
+
+</header>
+
+<section class="movies">
+
+<div class="movie">
+
+<img src="movie 1.jpg">
+
+<h3>365 Days</h3>
+
+<div class="buttons">
+
+<button onclick="watchlist('365 Days')">Watchlist</button>
+
+<button onclick="openBooking('365 Days')">Reserve</button>
+
+</div>
+
+</div>
+
+<div class="movie">
+
+<img src="movie 2.jpg">
+
+<h3>To All The Boys I've Loved Before</h3>
+
+<div class="buttons">
+
+<button onclick="watchlist(`To All The Boys I've Loved Before`)">Watchlist</button>
+
+<button onclick="openBooking(`To All The Boys I've Loved Before`)">Reserve</button>
+
+</div>
+
+</div>
+
+<div class="movie">
+
+<img src="movie 3.jpg">
+
+<h3>Fifty Shades of Grey</h3>
+
+<div class="buttons">
+
+<button onclick="watchlist('Fifty Shades of Grey')">Watchlist</button>
+
+<button onclick="openBooking('Fifty Shades of Grey')">Reserve</button>
+
+</div>
+
+</div>
+
+<div class="movie">
+
+<img src="movie 4.jpg">
+
+<h3>Dhurandhar</h3>
+
+<div class="buttons">
+
+<button onclick="watchlist('Dhurandhar')">Watchlist</button>
+
+<button onclick="openBooking('Dhurandhar')">Reserve</button>
+
+</div>
+
+</div>
+
+<div class="movie">
+
+<img src="movie 5.jpg">
+
+<h3>Dhurandhar: The Revenge</h3>
+
+<div class="buttons">
+
+<button onclick="watchlist('Dhurandhar: The Revenge')">Watchlist</button>
+
+<button onclick="openBooking('Dhurandhar: The Revenge')">Reserve</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- POPUP MODAL -->
+
+<div id="bookingModal">
+
+<div class="booking">
+
+<button class="close-btn" onclick="closeBooking()">×</button>
+
+<div class="modal-left">
+
+<img id="modalPoster" class="modal-poster">
+
+</div>
+
+<div class="modal-right">
+
+<h3 id="movieTitle"></h3>
+
+<p class="booking-text">
+
+We don’t trade in money here.<br><br>
+
+Instead, we'd love to hear a little <b>"I love you"</b> from you.
+
+</p>
+
+<form id="paymentForm">
+
+<input type="hidden" id="movieInput">
+
+<textarea
+name="message"
+placeholder="Type your message here..."
+required></textarea>
+
+<div class="modal-buttons">
+
+<button type="button" class="cancel-btn" onclick="closeBooking()">
+Cancel
+</button>
+
+<button type="submit" class="confirm-btn">
+Confirm Booking
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LOADING SCREEN -->
+
+<div id="loadingScreen">
+
+<div class="loader-box">
+
+<img src="logo.png" class="loader-logo">
+
+<p>Preparing your screening...</p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
